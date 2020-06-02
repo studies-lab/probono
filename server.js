@@ -26,8 +26,10 @@ db.mongoose
     process.exit();
   });
 
-const PORT = process.env.PORT || 5000;
+require("./app/routes/lawer.routes")(app);
+require("./app/routes/client.routes")(app);
 
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });

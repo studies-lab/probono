@@ -3,8 +3,10 @@ module.exports = mongoose => {
         "lawer",
         mongoose.Schema(
             {
-                email: String,
-                password: String,
+                email: { type: String, required: true, 
+                    unique: true },
+                password: { type: String, required: true,
+                    unique: true },
             },
             { timestamps: true }
         )

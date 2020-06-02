@@ -3,8 +3,9 @@ module.exports = mongoose => {
         "client",
         mongoose.Schema(
             {
-                cpf: int,
-                password: String,
+                cpf: { type: Number, required: true, unique: true},
+                password: { type: String, required: true,
+                    unique: true },
             },
             { timestamps: true }
         )
